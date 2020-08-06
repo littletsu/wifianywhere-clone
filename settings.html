@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="settings.css">
+    <title>Get free wifi anywhere you go</title>
+    <script defer>
+        function change(e) {
+            
+                document.getElementById('signal').style.display = e.target.checked ? 'inline' : 'none'
+                if(e.target.checked) {
+                    document.getElementById('audioholdUp').play();
+                    document.getElementById('wifiAnywhereCheckbox').setAttribute("disabled", "")
+                }
+                
+        }
+
+        function unDisableCheckbox() { 
+            document.getElementById('wifiAnywhereCheckbox').removeAttribute("disabled")
+        }
+    </script>
+</head>
+<body>
+    <div class="statusBarContainer">
+        &nbsp;&nbsp;iPod&nbsp;&nbsp;
+        <img id="signal" class="signalImg" src="signal.png" width="20" height="20">
+        
+    </div>
+    <div class="goBackToSettingsContainer">
+        <a href="#">< Settings</a>
+    </div>
+    <br><br><br>
+    <div class="wifiAnywhereContainer">
+        <span class="wifiAnywhereText">Wi-Fi Anywhere</span>
+        <input id="wifiAnywhereCheckbox" onchange="change(event)" class="apple-switch" type="checkbox">
+    </div>
+    <br>
+    <span class="wifiAnywhereDescriptor">
+        Wifi can be accessed from anywhere, provided
+    </span>
+    <br>
+    <span class="wifiAnywhereDescriptor">
+        Wifi access is already within reach and sim card is 
+    </span>
+    <br>
+    <span class="wifiAnywhereDescriptor">
+        supported.
+    </span>
+    <audio autoplay src="get wifi anywhere you go.mp3"/>
+    <audio id="audioholdUp" onended="unDisableCheckbox()" src="hold up.mp3"/>
+</body>
+</html>
