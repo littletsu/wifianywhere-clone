@@ -1,5 +1,5 @@
 # wifianywhere-clone
-An HTML page that imitates the app from the Wi-Fi Anywhere meme
+An HTML page that imitates the app from the Wi-Fi Anywhere meme. You can test it [here](https://qinatsu-wifianywhere-clone.glitch.me/settings.html)
 
 # Resources/Credits
 Most of the page designed by me<br>
